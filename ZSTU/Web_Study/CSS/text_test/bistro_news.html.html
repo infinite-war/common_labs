@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Black Goose Bistro News</title>
+
+    <link href="https://fonts.googleaois.com/->css?family=Marko+One" 
+    	  rel="stylesheet">
+
+	<style>
+
+	body{
+		background-color: #faf2e6;
+		margin: 0 10%;
+		font-family: Georgia, sans-serif;
+		line-height: 1.75em;
+	}
+	h1{
+		font: bold 1.5em "Marko One",Georgia, serif;
+		color: olive;
+		text-align: center;
+		font-size: 1.5em;
+		font-family: "Marko One", Georgia, serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc;
+		margin-top: 30px;
+		/* text-shadow：头2项为文本阴影设定，第3项为对文本阴影添加模糊半径*/
+		text-shadow: .2em .2em .1em silver;    
+	}
+	h2{
+		color: olive;
+		font-size:1em ;
+		font-style: obliques;
+		font-weight: bolder;
+		text-transform: uppercase;
+		letter-spacing: .5em;
+		
+	}
+
+	h2+p{
+		text-align: center;
+		font-style: italic;
+	}
+
+	strong{
+		font-style: italic;
+	}
+
+
+	ul{
+		list-style-type: disc;
+		list-style-image: url(/images/ganyu_chigua 300x300.png);
+		list-style-position: outside;
+	}
+
+/*-----------------选择器测试-------------------*/
+
+	#info {color:red;}
+	#info p{font-style: italic; color: gray;}
+	p strong{color: tomato;}
+	.price{
+		font-family:Georgia, serif ;
+		font-style: italic;
+		color: gray;
+	}
+	.label{
+		font-weight: bold;
+		font-variant: small-caps;
+		font-style: normal;
+	}
+	p.warning,sup{
+		font-size: small;
+		color: red;
+	}
+
+
+
+
+/*---------------------------------------------*/
+
+	</style>
+</head>
+
+<body>
+<header><h1>The Black Goose Bistro News</h1></header>
+
+<nav>
+	<a href="/">Home</a> |
+	<a href="/">Menu</a> |
+	<a href="/">News</a>|
+	<a href="/">Contact</a>
+</nav>
+
+<article>
+<h2>Summer Menu Items</h2>
+
+
+
+
+
+/*-----------------选择器测试-------------------*/
+<p id="info">special test</p>
+<span class="price">$3.95</span>
+<br>
+
+<ul>
+	<li>first</li>
+	<li>second</li>
+	<li>third</li>
+	<li>forth</li>
+</ul>
+
+
+/*---------------------------------------------*/
+
+
+
+<sup>we are required to warn you that undercooked food is a health risk.</sup>
+
+</body>
+</html>

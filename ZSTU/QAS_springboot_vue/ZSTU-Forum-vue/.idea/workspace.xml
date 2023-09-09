@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b96b956-7a30-40dd-aa81-afe2625b1593" name="Changes" comment="修改静态资源名称">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myvue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/myvue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myvue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/myvue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myvue/src/assets/npu-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/myvue/src/assets/zstu-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myvue/src/assets/npu下载.png" beforeDir="false" afterPath="$PROJECT_DIR$/myvue/src/assets/zstu下载.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="99e213b0-44b9-49b1-9a1a-e671b17fd149" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\TOOLS\maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\maven-repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../TOOLS/maven/apache-maven-3.8.4-bin/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="C:\TOOLS\maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29EQpfWRvPXoFwmvdzoWUx4dRHd" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/96955/Desktop/item/校园论坛项目/ZSTU-Forum-vue",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b96b956-7a30-40dd-aa81-afe2625b1593" name="Changes" comment="" />
+      <created>1652675949661</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652675949661</updated>
+      <workItem from="1652675952309" duration="1352000" />
+      <workItem from="1668411122053" duration="1043000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改静态资源名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改静态资源名称" />
+  </component>
+</project>

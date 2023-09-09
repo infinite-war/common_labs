@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>网格</title>
+
+    <link href="https://fonts.googleaois.com/->css?family=Marko+One" 
+    	  rel="stylesheet">
+
+	<style>
+
+	body{
+		background: url(./images/ganyu_work.png) left top no-repeat,
+					      url(./images/ganyu_flowers.png) center center no-repeat,
+						  url(./images/ganyu_hi.png) right bottom no-repeat;
+		background-size:170px 170px;
+		
+
+		background-color: #faf2e6;
+
+		/*background 和 background-image 最好不要一起用，容易出现覆盖*/
+		/*background-image: repeating-linear-gradient(45deg,orange,orange 12px,white 12px,white 13px);*/
+		/*xxdeg代表颜色线性渐变的角度*/
+
+		margin: 0 10%;
+		font-family: Georgia, sans-serif;
+		line-height: 1.75em;
+	}
+	h1{
+		font: bold 1.5em "Marko One",Georgia, serif;
+		color: olive;
+		text-align: center;
+		font-size: 1.5em;
+		font-family: "Marko One", Georgia, serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc;
+		margin-top: 30px;
+		/* text-shadow：头2项为文本阴影设定，第3项为对文本阴影添加模糊半径*/
+		text-shadow: .2em .2em .1em silver;    
+	}
+	h2{
+		color: olive;
+		font-size:1em ;
+		font-style: obliques;
+		font-weight: bolder;
+		text-transform: uppercase;
+		letter-spacing: .5em;
+		
+	}
+
+	blockquote{
+		border: 3px dashed;
+		color: greenyellow;
+		background-color: black;
+	}
+
+	p.warning::before{
+		/*content: url(./images/ganyu_work.png);*/
+		margin-right: 6px;
+	}
+	p.warning::after{
+		contect: "Thank you.";
+		color: red;
+	}
+
+
+	header{
+		margin-top: 0;
+		padding: 3em 1em 2em 2em;
+		text-align: center;
+		background-color: rgba(255, 255, 255, .5);
+		background-image: url(./images/ganyu_chigua 300x300.png);
+		background-size: 10%  10em;
+		background-repeat: repeat-x;
+	}
+
+
+	p{
+		border: 2px red solid;
+	}
+
+
+/*-------------------网格属性区------------------*/
+
+
+	#layout{
+		display: grid;
+		grid-template-rows: 100px 200px 100px;     /*数字的个数决定最多有几行*/
+		/*如果行数过多的话还可以写成 
+		grid-template-rows: repeats(重复几次，模式(如“20px 1fr”))*/
+		grid-template-columns: 1fr 2fr 1fr; /*数字的个数决定最多有几列*/
+		grid-gap: 20px 50px;   /*行间距  列间距*/
+
+		grid-template-areas:  /*划分区域并取名，这些命名可以拿来引用*/
+		"header   header   header"
+		"ads      main     links"
+		"footer   footer   footer";
+	}
+
+	#one{
+		background-color: red;
+		grid-row: 1 / 2;     /* 起始行 / 结束行 */
+		grid-column: 1 / 4;   /* 起始列 / 结束列 */
+	}
+	#two{
+		background-color: yellow;
+	}
+	#three{
+		background-color: lightblue;
+	}
+	#four{
+		background-color: greenyellow;
+
+	}
+	#five{
+		background-color: orange;
+	}
+
+
+/*-------------------隐式网格属性区------------------*/
+
+	#littlegrid{
+		display: grid;
+		grid-template-columns: 200px 200px;
+		grid-template-rows: 200px 200px;
+		grid-auto-columns: 100px;
+		grid-auto-rows: 100px;
+	}
+	#A{
+		grid-row: 1 / 2;
+		grid-column: 2 / 3;
+		background-color: lightgray;
+	}
+	#B{
+		grid-row: 3 / 4;
+		grid-column: 5 / 6;
+		background-color: lightpink;
+	}
+
+
+
+	</style>
+</head>
+
+<body>
+<header><h1>The Black Goose Bistro News</h1></header>
+
+<div id="layout">
+	<div id="one">One</div>
+	<div id="two">Two</div>
+	<div id="three">Three</div>
+	<div id="four">Four</div>
+	<div id="five">Five</div>
+</div>
+
+<br><br>
+
+<div id="littlegrid">
+	<div id="A">A</div>
+	<div id="B">B</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+/*用户表*/
+CREATE TABLE `account` (
+  `id` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+/*书籍表*/
+CREATE TABLE `book` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `isbn` varchar(80) NOT NULL,
+  `bookName` varchar(20) NOT NULL,
+  `writer` varchar(40) NOT NULL,
+  `publisher` varchar(40) NOT NULL,
+  `owner` varchar(40) NOT NULL,
+  `takeMethod` varchar(255) NOT NULL,
+  `price` float(5,2) NOT NULL,
+  `status` tinyint NOT NULL,
+  `selled` tinyint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `owner` (`owner`),
+  CONSTRAINT `owner` FOREIGN KEY (`owner`) REFERENCES `account` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
+) ENGINE=InnoDB AUTO_INCREMENT=13457 DEFAULT CHARSET=utf8mb3;
+
+/*订单表*/
+CREATE TABLE `mainorder` (
+  `id` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `buyerName` varchar(40) NOT NULL,
+  `sellerName` varchar(40) NOT NULL,
+  `allBookNums` smallint NOT NULL,
+  `allSumPrice` float(5,2) NOT NULL,
+  `createTime` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `buyerName` (`buyerName`),
+  KEY `sellerName` (`sellerName`),
+  CONSTRAINT `buyerName` FOREIGN KEY (`buyerName`) REFERENCES `account` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `sellerName` FOREIGN KEY (`sellerName`) REFERENCES `account` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+/*子订单表*/
+CREATE TABLE `suborder` (
+  `id` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `mainOrderId` int NOT NULL,
+  `BookId` int NOT NULL,
+  `bookNums` tinyint NOT NULL,
+  `sumPrice` float(5,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `BookId` (`BookId`),
+  KEY `mainOrderId` (`mainOrderId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

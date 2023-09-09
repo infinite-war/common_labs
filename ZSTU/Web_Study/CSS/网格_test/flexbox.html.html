@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>flexbox</title>
+
+    <link href="https://fonts.googleaois.com/->css?family=Marko+One" 
+    	  rel="stylesheet">
+
+	<style>
+
+	body{
+		background: url(./images/ganyu_work.png) left top no-repeat,
+					      url(./images/ganyu_flowers.png) center center no-repeat,
+						  url(./images/ganyu_hi.png) right bottom no-repeat;
+		background-size:170px 170px;
+		
+
+		background-color: #faf2e6;
+
+		/*background 和 background-image 最好不要一起用，容易出现覆盖*/
+		/*background-image: repeating-linear-gradient(45deg,orange,orange 12px,white 12px,white 13px);*/
+		/*xxdeg代表颜色线性渐变的角度*/
+
+		margin: 0 10%;
+		font-family: Georgia, sans-serif;
+		line-height: 1.75em;
+	}
+	h1{
+		font: bold 1.5em "Marko One",Georgia, serif;
+		color: olive;
+		text-align: center;
+		font-size: 1.5em;
+		font-family: "Marko One", Georgia, serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc;
+		margin-top: 30px;
+		/* text-shadow：头2项为文本阴影设定，第3项为对文本阴影添加模糊半径*/
+		text-shadow: .2em .2em .1em silver;    
+	}
+	h2{
+		color: olive;
+		font-size:1em ;
+		font-style: obliques;
+		font-weight: bolder;
+		text-transform: uppercase;
+		letter-spacing: .5em;
+		
+	}
+
+	blockquote{
+		border: 3px dashed;
+		color: greenyellow;
+		background-color: black;
+	}
+
+	p.warning::before{
+		/*content: url(./images/ganyu_work.png);*/
+		margin-right: 6px;
+	}
+	p.warning::after{
+		contect: "Thank you.";
+		color: red;
+	}
+
+
+	header{
+		margin-top: 0;
+		padding: 3em 1em 2em 2em;
+		text-align: center;
+		background-color: rgba(255, 255, 255, .5);
+		background-image: url(./images/ganyu_chigua 300x300.png);
+		background-size: 10%  10em;
+		background-repeat: repeat-x;
+	}
+
+
+	p{
+		border: 2px red solid;
+	}
+	#container{
+		display: flex;      
+		height: 200px;
+		flex-direction:row;     /*默认为row正序行排列*/
+		align-items: stretch;
+	}
+	.box{
+		width: 5%;
+		background-color: greenyellow;
+		flex: 1 1 auto;
+	}
+	.box4{
+		align-self: flex-end;
+		background-color: red;
+		flex: 3 1 auto;
+		order: -1;     /*排序权重，默认为0*/
+	}
+
+
+	ul{
+		display: flex;
+		align-items: center;
+		background-color: #00af8f;
+		list-style: none;
+		padding: .5em;
+		margin: 0;
+	}
+	li{
+		margin: 0 1em;
+	}
+	li.logo{
+		margin-right: auto;
+	}
+
+
+
+	</style>
+</head>
+
+<body>
+<header><h1>The Black Goose Bistro News</h1></header>
+
+<nav>
+	<a href="./images/ganyu_flowers.png">b</a> |
+	<a href="./images/ganyu_work.png">c</a>|
+	<a href="./images/ganyu_hi.png">d</a>
+</nav>
+
+<article>
+
+<div id="container">
+	<div class="box box1">1</div>
+	<div class="box box2">2</div>
+	<div class="box box3">3</div>
+	<div class="box box4">4</div>
+	<div class="box box5">5</div>
+	<div class="box box6">6</div>
+	<div class="box box7">7</div>
+	<div class="box box8">8</div>
+	<div class="box box9">9</div>
+	<div class="box box10">10</div>
+</div>
+
+<br><br>
+
+<ul>
+	<li class="logo"><img src="images/ganyu_chigua 300x300.png"></li>
+	<li>About</li>
+	<li>Blog</li>
+	<li>Shop</li>
+	<li>Contant</li>
+</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form Test</title>
+	<style>
+	body{
+		background-color: #faf2e6;
+		margin: 0 10%;
+		font-family: sans-serif;
+	}
+	h1{
+		text-align: center;
+		font-family: serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc;
+		margin-top: 30px;
+	}
+	h2{
+		color: #d16e3c;
+		font-size:1em ;
+	}
+
+
+	</style>
+</head>
+
+
+<body>
+<p>
+<picture>
+<img src="images/ganyu_chigua 850x850.png" alt="logo" width="120" height="120">	
+</picture>
+</p>
+
+<h1>Mailing List Signup</h1>
+
+<form action="http://www.blackgoosebistro.com/pizza.php" method="POST">
+	<fieldset>
+		<legend>Join our email list</legend>
+		<p>Get news about the band such as tour dates and special MP3 releases sent to your own in-box</p>
+
+<br>
+<!--单选框测试-->
+<p>单选框测试</p>
+		<p>How old are you?</p>
+		<ol>
+			<li><input type="radio" name="age" value="under24" >under 24</li>
+			<li><input type="radio" name="age" value="25-34" >25-34</li>
+			<li><input type="radio" name="age" value="35-44" checked>35-44</li>
+			<li><input type="radio" name="age" value="over45" >45+ </li>
+		</ol>	
+<br>
+<!--部分基本控件测试-->   
+<p>部分基本控件测试</p>                   
+		<p>Fill your basic information</p>
+		<ol>
+			<li><label for="firstlist">Name:</label>
+			  <input type="text" list="first" name="fullname" id="firstlist">
+			    <datalist id="first">
+			    <option value="aaa">
+			    <option value="bbb">
+			    <option value="ccc">
+			    <option value="ddd"></datalist></li>
+
+			<li><label for="email">Email:</label>
+			  <input type="text" name="email" id="email"></li>
+
+			<li><label for="password">Password
+			  <input type="password" name="pswd" maxlength="12" id="password"></li>
+
+			<li><label for="textarea">others<textarea></textarea></li>
+		</ol>
+		  <input type="submit" value="Submit"><input type="reset" value="Reset"><br><br>
+		
+		<input type="image" src="/images/ganyu_hi.png">
+		<input type="button">
+</fieldset>
+</from>
+
+
+
+<br><br>
+<form action="http://www.blackgoosebistro.com/pizza.php" method="POST">
+	<fieldset>
+		<legend>Other test</legend>
+
+
+<br>
+<!--复选框测试-->
+<p>复选框测试</p>
+		<p>What type of music do you listen to?</p>
+		<ol>
+			<li><input type="checkbox" name="genre" value="punk" >Punk rock</li>
+			<li><input type="checkbox" name="genre" value="indie" checked>Indle rock</li>
+			<li><input type="checkbox" name="genre" value="hiphop" checked>Hip hop</li>
+			<li><input type="checkbox" name="genre" value="rockabilly" >Rockabilly</li>
+		</ol>	
+<br>	
+<!--菜单测试-->
+<p>菜单测试</p>
+		<p>What's your favorite 80s band?
+			<select name="EightiesFave">
+				<option>The Cure</option>
+				<option>Cocteau Twins</option>
+				<option>Tears for Fears</option>
+				<option>Thomposon Twins</option>
+				<option value="EBGT">Everything But the Girl</option>    <!--value表示选择了该选项，上传的将是value的值（EBGT）而不是Everything But the Girl-->
+				<option>Depeche Mode</option>
+				<option>Made in heaven</option>
+				<option>Killer Queen</option>
+			</select>
+		</p>
+<br>
+<!--组合菜单测试-->
+<p>组合菜单测试</p>
+		<p>What's your major?
+			<select name="major" multiple>
+				<optgroup label="数学系">
+					<option>应用数学</option>
+					<option>计算数学</option>
+				</optgroup>
+				<optgroup label="外语系">
+					<option>英语</option>
+					<option>日语</option>
+					<option>德语</option>
+					<option>法语</option>
+				</optgroup>
+				<optgroup label="计算机系">
+					<option>计算机科学与技术</option>
+					<option>数字媒体技术</option>
+					<option>智能科学技术</option>
+					<option>电子信息技术</option>
+					<option>通信工程</option>
+				</optgroup>
+				<optgroup label="经济管理系">
+					<option>经济学</option>
+					<option>金融学</option>
+					<option>国际贸易</option>
+				</optgroup>
+			</select>		
+		</p>
+<br>
+<!--文件选择控件-->
+<p>文件选择控件</p>
+		<form action="/client.php" method="POST" enctype="multipart/form-data">
+			<label>Send a photo to be used as your online icon<em>(optional)</em>
+			<br>
+			<input type="file" name="photo"></label>
+		</form>
+
+<br>
+<!--隐藏控件-->
+<p>隐藏控件</p>
+		<input type="hidden" name="success-link" value="http://www.example.com/thankyou.html">
+
+<br><br>
+<!--日期控件-->
+<p>日期控件</p>
+		<input type="date">   <br><br>
+		<input type="time">   <br><br>
+		<input type="datetime-local">   <br><br>
+		<input type="month">   <br><br>
+		<input type="week">   <br><br>
+
+	
+<br><br>
+<!--数字控件-->
+<p>数字控件</p>
+		<label>Number of guests <input type="number" name="guest" min="1" max="6"></label>
+		<label>Satisfaction (0 to 100) <input type="range" name="satisfaction" min="0" 		max="100" step="1"></label>
+
+<br><br>
+<!--颜色选择器-->
+<p>颜色选择器</p>
+		<label>Your favorite color: <input type="color" name="faborite"></label>
+
+
+
+	</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BuyerForm</class>
+ <widget class="QMainWindow" name="BuyerForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>950</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="booksTableView">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>80</y>
+      <width>941</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerItem</enum>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>50</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>150</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>60</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>60</number>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;买方界面&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="allBooksButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>510</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>显示所有在售书籍</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>180</y>
+      <width>61</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;在&lt;br/&gt;售&lt;br/&gt;书&lt;br/&gt;籍&lt;br/&gt;栏&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="searchBookTextbox">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>510</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchBookButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>510</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>按书名关键字查询</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="ordersTableView">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>630</y>
+      <width>941</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>50</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>150</number>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>60</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>60</number>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>630</y>
+      <width>61</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;已&lt;br&gt;购&lt;br&gt;订&lt;br/&gt;单&lt;br/&gt;栏&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="allOrderButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>580</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>显示已购订单</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="purchaseButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>510</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>购入</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="goToSellerFormButton">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>20</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>进入卖方界面</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="orderNumsLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>860</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;订单总数：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="userNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>301</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>用户：</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1050</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="logoutMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="action_log_out"/>
+    <addaction name="actionchange_your_password"/>
+   </widget>
+   <addaction name="logoutMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_log_out">
+   <property name="text">
+    <string>log_out</string>
+   </property>
+  </action>
+  <action name="actionchange_your_password">
+   <property name="text">
+    <string>change_your_password</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>goToSellerFormButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyerForm</receiver>
+   <slot>goto_sellerForm_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>889</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>814</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>allBooksButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyerForm</receiver>
+   <slot>search_selling_book_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>29</x>
+     <y>576</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchBookButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyerForm</receiver>
+   <slot>search_target_book_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>552</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>796</x>
+     <y>580</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>purchaseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyerForm</receiver>
+   <slot>on_purchase_button_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>394</x>
+     <y>555</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>allOrderButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BuyerForm</receiver>
+   <slot>on_search_buyerOrder_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>634</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>goto_sellerForm_click()</slot>
+  <slot>search_selling_book_click()</slot>
+  <slot>search_target_book_click()</slot>
+  <slot>on_purchase_button_click()</slot>
+  <slot>on_search_buyerOrder_click()</slot>
+ </slots>
+</ui>

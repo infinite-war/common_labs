@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Table Test</title>
+	<style>
+	body{
+		background-color: #faf2e6;
+		margin: 0 10%;
+		font-family: sans-serif;
+	}
+	h1{
+		text-align: center;
+		font-family: serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc;
+		margin-top: 30px;
+	}
+	h2{
+		color: #d16e3c;
+		font-size:1em ;
+	}
+	table{
+		border: 1px solid black;
+	}
+	td,th{
+		border: 1px solid #CCC;
+		gray;
+	}
+
+
+	</style>
+</head>
+
+
+<body>
+<p>
+<picture>
+<img src="images/ganyu_chigua 850x850.png" alt="logo" width="120" height="120">	
+</picture>
+</p>
+
+<table>
+<caption> A table test</caption>
+
+<thead>
+<td>thead</td>
+<td>thead</td>
+<td>thead</td>
+<td>thead</td>
+</thead>
+
+<tbody>
+<tr>
+	<th rowspan="2">  </th>
+	<th colspan="2">A common header for two subheads</th>
+	<th rowspan="2"> Header 3</th>
+</tr>
+<tr>
+	<th>Header 1</th>
+	<th>Header 2</th>
+</tr>
+<tr>
+	<th scope="row">Thing A</th>
+	<td >data A1</td>
+	<td >data A2</td>
+	<td >data A3</td>
+</tr>
+<tr>
+	<th scope="row">Thing B</th>
+	<td >data B1</td>
+	<td >data B2</td>
+	<td >data B3</td>
+</tr>
+<tr>
+	<th scope="row">Thing C</th>
+	<td >data C1</td>
+	<td >data C2</td>
+	<td >data C3</td>
+</tr>
+</tbody>
+
+<tfoot>
+<td>tfoot</td>
+<td>tfoot</td>
+<td>tfoot</td>
+<td>tfoot</td>
+</tfoot>
+
+</table>
+
+<br><br>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+</body>
+</html>

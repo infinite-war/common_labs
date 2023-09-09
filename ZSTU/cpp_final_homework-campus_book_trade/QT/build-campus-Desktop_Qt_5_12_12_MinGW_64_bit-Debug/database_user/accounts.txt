@@ -1,0 +1,2 @@
+Hostname    DatabaseName            UserName    Password               Port
+127.0.0.1 campus_book_trade root a13587491757A 3306

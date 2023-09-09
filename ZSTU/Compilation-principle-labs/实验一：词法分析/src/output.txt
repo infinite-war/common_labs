@@ -1,0 +1,32 @@
+Key word: read
+Variable,name= x
+other: ;
+Key word: if
+Number,val= 0
+operator: <
+Variable,name= x
+Key word: then
+Variable,name= fact
+operator: :=
+Number,val= 1
+other: ;
+Key word: repeat
+Variable,name= fact
+operator: :=
+Variable,name= fact
+operator: *
+Variable,name= x
+other: ;
+Variable,name= x
+operator: :=
+Variable,name= x
+operator: -
+Number,val= 1
+Key word: until
+Variable,name= x
+operator: =
+Number,val= 0
+other: ;
+Key word: write
+Variable,name= fact
+Key word: end
