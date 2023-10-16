@@ -85,62 +85,75 @@ public class Application {
 
     static class CommandManagement{
         public static void inputCommand(String[] input){
+            try{
+                Method method=CommandManagement.class.getMethod(input[0]);
+                callFunc(method, input);
+            } catch (NoSuchMethodException e) {
+                System.out.println("不存在相关指令，可用指令如下");
+                View.help();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            // switch (input.length){
+            //     case 1:
+                    // try{
+                    //     Method method=CommandManagement.class.getMethod(input[0]);
+                    //     callFunc0(method);
+                    // } catch (NoSuchMethodException e) {
+                    //     System.out.println("不存在相关指令，可用指令如下");
+                    //     View.help();
+                    // } catch (Exception e) {
+                    //     throw new RuntimeException(e);
+                    // }
+                    // break;
 
-            switch (input.length){
-                case 1:
-                    try{
-                        Method method=CommandManagement.class.getMethod(input[0]);
-                        callFunc0(method);
-                    } catch (NoSuchMethodException e) {
-                        System.out.println("不存在相关指令，可用指令如下");
-                        View.help();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                    break;
-
-                case 2:
-                    try{
-                        Method method=CommandManagement.class.getMethod(input[0],String.class);
-                        callFunc1(method,input);
-                    } catch (NoSuchMethodException e) {
-                        System.out.println("不存在相关指令，可用指令如下");
-                        View.help();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                    break;
-                case 3:
-                    try{
-                        Method method=CommandManagement.class.getMethod(input[0],String.class,String.class);
-                        callFunc2(method,input);
-                    } catch (NoSuchMethodException e) {
-                        System.out.println("不存在相关指令，可用指令如下");
-                        View.help();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                    break;
-                default:
-                    System.out.println("not an available command, type 'help' to get available commands");
+            //     case 2:
+            //         try{
+            //             Method method=CommandManagement.class.getMethod(input[0],String.class);
+            //             callFunc1(method,input);
+            //         } catch (NoSuchMethodException e) {
+            //             System.out.println("不存在相关指令，可用指令如下");
+            //             View.help();
+            //         } catch (Exception e) {
+            //             throw new RuntimeException(e);
+            //         }
+            //         break;
+            //     case 3:
+            //         try{
+            //             Method method=CommandManagement.class.getMethod(input[0],String.class,String.class);
+            //             callFunc2(method,input);
+            //         } catch (NoSuchMethodException e) {
+            //             System.out.println("不存在相关指令，可用指令如下");
+            //             View.help();
+            //         } catch (Exception e) {
+            //             throw new RuntimeException(e);
+            //         }
+            //         break;
+            //     default:
+            //         System.out.println("not an available command, type 'help' to get available commands");
             }
 
 
         }
 
-        // 0参数指令
-        public static void callFunc0(Method method) throws Exception {
-            method.invoke(null);
-        }
+        // // 0参数指令
+        // public static void callFunc0(Method method) throws Exception {
+        //     method.invoke(null);
+        // }
 
-        // 1参数指令
-        public static void callFunc1(Method method, String[] parm) throws Exception {
-            method.invoke(null, parm[1]);
-        }
+        // // 1参数指令
+        // public static void callFunc1(Method method, String[] parm) throws Exception {
+        //     method.invoke(null, parm[1]);
+        // }
 
-        // 2参数指令
-        public static void callFunc2(Method method, String[] parm) throws Exception {
-            method.invoke(null, parm[1], parm[2]);
+        // // 2参数指令
+        // public static void callFunc2(Method method, String[] parm) throws Exception {
+        //     method.invoke(null, parm[1], parm[2]);
+        // }
+
+        public static void callFunc(Method method, String... parm) throws Exception {
+            String[] paramsSubset = Arrays.copyOfRange(params, 1, params.length);
+            method.invoke(null, parmsSubset);
         }
 
 
